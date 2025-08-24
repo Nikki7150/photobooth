@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>K-Pop PhotoBooth</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>PhotoBooth!</h1>
+        <video id="video" autoplay></video>
+        <button id="snap">Capture</button>
+
+       <div id="photostrip">
+            <div class="photocard">
+                <canvas class="slot"></canvas>
+                <canvas class="slot"></canvas>
+                <canvas class="slot"></canvas>
+                <canvas class="slot"></canvas>
+            </div>
+        </div>
+        <button id="add-sticker">Next Step: Add Stickers!</button>
+
+        <div id="sticker-controls" style="display:none;">
+            <button id="tech-toggle">Tech /Gamer Stickers</button>
+            <button id="cute-toggle">Cute /Aesthetic Stickers</button>
+            <div id="sticker-panel"></div>
+        </div>
+    </body>
+    <script src="./app.js"></script>
+</html>
