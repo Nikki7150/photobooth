@@ -2,13 +2,19 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>K-Pop PhotoBooth</title>
+        <!-- <link rel="icon" href="todo-icon.png" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PhotoBooth</title>
         <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1>PhotoBooth!</h1>
-        <video id="video" autoplay></video>
-        <button id="snap">Capture</button>
+        <div id="camera">
+            <video id="video" autoplay></video>
+            <button id="snap">📷</button>
+        </div>
 
        <div id="photostrip">
             <div class="photocard">
@@ -21,9 +27,30 @@
         <button id="add-sticker">Next Step: Add Stickers!</button>
 
         <div id="sticker-controls" style="display:none;">
-            <button id="tech-toggle">Tech /Gamer Stickers</button>
-            <button id="cute-toggle">Cute /Aesthetic Stickers</button>
-            <div id="sticker-panel"></div>
+            <h2>Choose either a </h2>
+            <hr />
+            <h2>Solid color Overlay: </h2>
+            <div id="overlay">
+                <button id="overlay">Overlay 1</button>
+                <button id="overlay">Overlay 2</button>
+                <button id="overlay">Overlay 3</button>
+                <button id="overlay">Overlay 4</button>
+                <button id="overlay">Overlay 5</button>
+                <button id="overlay">Overlay 6</button>
+            </div>
+            <hr />
+            <h2> Or a...</h2>
+            <hr />
+            <h2>Pattern Overlay: </h2>
+            <div id="overlay">
+                <button id="overlay">Overlay 1</button>
+                <button id="overlay">Overlay 2</button>
+                <button id="overlay">Overlay 3</button>
+                <button id="overlay">Overlay 4</button>
+                <button id="overlay">Overlay 5</button>
+                <button id="overlay">Overlay 6</button>
+            </div>
+            
         </div>
     </body>
     <script src="./app.js"></script>
