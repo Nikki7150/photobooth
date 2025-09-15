@@ -1,1 +1,1 @@
-# k-pop-photobooth
+# photobooth
