@@ -1,3 +1,13 @@
+document.addEventListener("keydown", function(e) {
+  // F5 or Ctrl+R (Cmd+R on Mac)
+  if (e.key === "F5" || (e.ctrlKey && e.key === "r") || (e.metaKey && e.key === "r")) {
+    e.preventDefault();
+    if (confirm("Reloading will reset your photocard. Continue?")) {
+      location.reload(); // reload only if user clicks OK
+    }
+  }
+});
+
 // Page 1- take pictures
 const camera = document.getElementById('camera');
 const video = document.getElementById('video');
@@ -39,6 +49,7 @@ addStickerBtn.addEventListener('click', () => {
 
 // Page 2 - Add Stickers
 const stickerControls = document.getElementById('sticker-controls');
+
 const overlayLayer = document.getElementById('overlay-layer');
 const photostrip = document.getElementById('photostrip');
 const photocard = document.getElementById('photocard');
@@ -123,12 +134,11 @@ function applyPatternOverlay(src) {
 // Page 3 - Final View
 const exportcontrols = document.getElementById('export-controls');
 const doublePhotocard = document.getElementById('double-photocard');
-const downloadBtn = document.getElementById('download-btn');
+const downloadBtn = document.getElementById('download');
 
 finalizeBtn.addEventListener('click', () => {
     enterFinalMode();
 });
-
 
 function enterFinalMode() {
     // Hide editing UI
@@ -149,21 +159,26 @@ function enterFinalMode() {
     // Get the photostrip element
     const photostripElement = document.getElementById("photostrip");
 
-    // Render the photostrip once into canvas
+    // Render the photostrip once into canvas for preview
     html2canvas(photostripElement, { useCORS: true }).then(canvas => {
         const dataURL = canvas.toDataURL("image/png");
 
         // Put same image twice in diagonal layout
-        doublePhotocard.querySelector('#double-photocard .original').innerHTML = `<img src="${dataURL}" style="width:100%; border-radius:8px;">`;
-        doublePhotocard.querySelector('#double-photocard .clone').innerHTML = `<img src="${dataURL}" style="width:100%; border-radius:8px;">`;
+        doublePhotocard.querySelector('.original').innerHTML =
+            `<img src="${dataURL}" style="width:100%; border-radius:8px;">`;
+        doublePhotocard.querySelector('.clone').innerHTML =
+            `<img src="${dataURL}" style="width:100%; border-radius:8px;">`;
     });
-
-    // Download = just one clean photocard (with overlay included)
-        downloadBtn.onclick = () => {
-            const link = document.createElement("a");
-            link.href = dataURL;
-            link.download = "photocard.png";
-            link.click();
-        };
 }
+
+// Download button handler: download fresh image
+downloadBtn.addEventListener('click', () => {
+    const photostripElement = document.getElementById("photostrip");
+    html2canvas(photostripElement, { useCORS: true }).then(canvas => {
+        const link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = "photostrip.png";
+        link.click();
+    });
+});
 

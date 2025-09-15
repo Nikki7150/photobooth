@@ -1,0 +1,39 @@
+body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* background: linear-gradient(135deg, #ffe3ec, #d8eafd); */
+      font-family: 'Share Tech Mono', monospace;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-family: 'Press Start 2P', cursive;
+      margin-bottom: 5px;
+    }
+    
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      color: white;
+      background: #ff4d6d;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #d6336c;
+      transform: translateY(-3px);
+    }
