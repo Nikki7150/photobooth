@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- <link rel="icon" href="todo-icon.png" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PhotoBooth</title>
+        <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    </head>
+
+    <body>
+        <a id="home-link" href="index.html" class="h1">Photobooth!</a>
+        <div id="camera">
+            <video id="video" autoplay></video>
+            <button id="snap">📷</button>
+        </div>
+
+        <div id="photostrip-wrapper" style="position: relative;">
+            <div id="photostrip">
+                <div id="photocard">
+                    <canvas class="slot"></canvas>
+                    <canvas class="slot"></canvas>
+                    <canvas class="slot"></canvas>
+                    <canvas class="slot"></canvas>
+                </div>
+                <div id="overlay-layer" style="display:none;">
+                    <img id="pattern" src="assets/maroon-overlay.png" style="width:100%; height:100%; object-fit:cover;"/>
+                </div>
+            </div>
+            
+        </div>
+        <button id="add-sticker">Next Step: Add Stickers!</button>
+
+        <!-- Page two. -->
+       <div id="sticker-controls" style="display:none;">
+            <h2>Choose either a </h2>
+            <hr />
+            <h2>Solid color Overlay: </h2>
+            <div id="overlay-div1">
+                <button id="Red-overlay">Red</button>
+                <button id="Green-overlay">Green</button>
+                <button id="Blue-overlay">Blue</button>
+                <button id="Yellow-overlay">Yellow</button>
+                <button id="Purple-overlay">Purple</button>
+                <button id="Orange-overlay">Orange</button>
+                <button id="Pink-overlay">Pink</button>
+                <button id="White-overlay">White</button>
+                <button id="Black-overlay">Black</button>
+            </div>
+            <hr />
+            <h2> Or a...</h2>
+            <hr />
+            <h2>Pattern Overlay: </h2>
+
+            <div id="overlay-div2">
+                <button id="maroon-overlay">Maroon Pattern</button>
+                <button id="bluecircle-overlay">Blue Pattern</button>
+                <button id="film-overlay">Film Pattern</button>
+                <button id="leaves-overlay">Leaves Pattern</button>
+                <button id="clouds-overlay">Clouds Pattern</button>
+                <button id="tape-overlay">Washi Tape Pattern</button>
+            </div>
+        </div>
+        <button id="Finalize" style="display:none;">Last Step: Export!</button>
+
+        <!-- Page two. -->
+        <div id="export-controls" style="display:none;">
+            <h2>Export your PhotoStrip!</h2>
+            <div id="double-photocard">
+                <div class="card original"></div>
+                <div class="card clone"></div>
+            </div>
+            <button id="download">Download! </button>
+        </div>
+    </body>
+    <script src="./app.js"></script>
+</html>

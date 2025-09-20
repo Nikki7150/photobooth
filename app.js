@@ -8,6 +8,13 @@ document.addEventListener("keydown", function(e) {
   }
 });
 
+const homelink = document.getElementById('home-link');
+if (homelink) {
+    homelink.addEventListener('click', (e) => {
+        confirm("Going back to home will reset your photocard. Continue?") || e.preventDefault();
+    });
+}
+
 // Page 1- take pictures
 const camera = document.getElementById('camera');
 const video = document.getElementById('video');
@@ -69,9 +76,9 @@ function enterStickerMode() {
     }
 
     // Show overlay layer
-    if (overlayLayer) {
-        overlayLayer.style.display = 'block';
-    }
+    //if (overlayLayer) {
+    //    overlayLayer.style.display = 'block';
+    //}
 }
 
 const image = document.getElementById('pattern');
@@ -88,11 +95,11 @@ const whiteBtn = document.getElementById('White-overlay');
 const blackBtn = document.getElementById('Black-overlay');
 
 const maroonBtn = document.getElementById('maroon-overlay');
-const navyBtn = document.getElementById('navy-overlay');
-const tealBtn = document.getElementById('teal-overlay');
-const oliveBtn = document.getElementById('olive-overlay');
-const grayBtn = document.getElementById('gray-overlay');
-const silverBtn = document.getElementById('silver-overlay');
+const bluecircleBtn = document.getElementById('bluecircle-overlay');
+const filmBtn = document.getElementById('film-overlay');
+const leavesBtn = document.getElementById('leaves-overlay');
+const cloudsBtn = document.getElementById('clouds-overlay');
+const tapeBtn = document.getElementById('tape-overlay');
 
 redBtn.addEventListener('click', () => applyOverlay('rgba(178, 43, 39)'));
 greenBtn.addEventListener('click', () => applyOverlay('rgba(0, 41, 24)'));
@@ -105,23 +112,25 @@ whiteBtn.addEventListener('click', () => applyOverlay('rgba(255, 255, 255)'));
 blackBtn.addEventListener('click', () => applyOverlay('rgba(0, 0, 0)'));
 
 maroonBtn.addEventListener('click', () => applyPatternOverlay('assets/maroon-overlay.png'));
-navyBtn.addEventListener('click', () => applyPatternOverlay('assets/blue-overlay.png').style.height = '50%');
-tealBtn.addEventListener('click', () => applyPatternOverlay('assets/casette-overlay.png').style.height = '754px');
-oliveBtn.addEventListener('click', () => applyPatternOverlay('assets/leaves-overlay.png'));
-grayBtn.addEventListener('click', () => applyPatternOverlay('assets/puffy-overlay.png').style.height = '754px');
-silverBtn.addEventListener('click', () => applyPatternOverlay('assets/tapes-overlay.png').style.height = '754px');
+bluecircleBtn.addEventListener('click', () => applyPatternOverlay('assets/blue-overlay.png').style.height = '760px');
+filmBtn.addEventListener('click', () => applyPatternOverlay('assets/casette-overlay.png').style.height = '754px');
+leavesBtn.addEventListener('click', () => applyPatternOverlay('assets/leaves-overlay.png'));
+cloudsBtn.addEventListener('click', () => applyPatternOverlay('assets/puffy-overlay.png').style.height = '754px');
+tapeBtn.addEventListener('click', () => applyPatternOverlay('assets/tapes-overlay.png').style.height = '754px');
 
 function applyOverlay(color) {
     if (overlayLayer) {
         image.style.display = 'none';
-        overlayLayer.style.backgroundColor = color;
         photostrip.style.backgroundColor = color;
         photocard.style.backgroundColor = color;
+        image.style.display = 'none';
+        overlayLayer.style.backgroundColor = 'transparent';
     }
 }
 
 function applyPatternOverlay(src) {
     if (overlayLayer) {
+        overlayLayer.style.display = 'block';
         overlayLayer.style.backgroundColor = 'transparent';
         photostrip.style.backgroundColor = 'transparent';
         photocard.style.backgroundColor = 'transparent';
@@ -151,6 +160,9 @@ function enterFinalMode() {
 
     if (photostrip) {
         photostrip.classList.add('final-mode');
+    }
+    if (overlayLayer) {
+        overlayLayer.classList.add('final-mode');
     }
 
     // Show final view

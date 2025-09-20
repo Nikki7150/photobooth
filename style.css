@@ -61,9 +61,10 @@ button:hover {
 a.h1 {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 50px;
+    font-size: 70px;
     text-decoration: none;
-    margin-left: 370px;
+    margin-left: 300px;
+    margin-top: 30px;
     color: black;
 }
 
@@ -88,7 +89,7 @@ a.h1 {
   margin: 0px;
   border: 2px solid black;
   padding: 20px;
-  background-color: rgb(159, 98, 98);
+  background-color: rgb(231, 231, 231);
   padding-bottom: 50px;
   border-radius: 5px;
   position: relative;
@@ -155,11 +156,23 @@ a.h1 {
 }
 
 #overlay-layer {
+  display: none;
   position: absolute;
   top: 0; left: 0;
   width: 247px;
   z-index: 10;
   margin-left: 300px;
+}
+
+#overlay-layer.final-mode {
+  position: absolute;
+  top: 0;
+  left: 500px;
+  width: 100%;   /* always match parent width */
+  height: 100%;  /* always match parent height */
+  pointer-events: none;
+  z-index: 10;
+  margin: 0;     /* remove the offset */
 }
 
 #photostrip.final-mode {
