@@ -56,7 +56,8 @@ addStickerBtn.addEventListener('click', () => {
 
 // Page 2 - Add Stickers
 const stickerControls = document.getElementById('sticker-controls');
-
+const scroll = document.getElementById('scroll');
+const click = document.getElementById('click');
 const overlayLayer = document.getElementById('overlay-layer');
 const photostrip = document.getElementById('photostrip');
 const photocard = document.getElementById('photocard');
@@ -67,6 +68,8 @@ function enterStickerMode() {
     snapBtn.style.display = 'none';
     camera.style.display = 'none';
     addStickerBtn.style.display = 'none';
+    scroll.style.display = 'none';
+    click.style.display = 'none';
     stickerControls.style.display = 'block';
     finalizeBtn.style.display = 'block';
 
@@ -144,6 +147,7 @@ function applyPatternOverlay(src) {
 const exportcontrols = document.getElementById('export-controls');
 const doublePhotocard = document.getElementById('double-photocard');
 const downloadBtn = document.getElementById('download');
+const retakeBtn = document.getElementById('retake');
 
 finalizeBtn.addEventListener('click', () => {
     enterFinalMode();
@@ -194,3 +198,7 @@ downloadBtn.addEventListener('click', () => {
     });
 });
 
+// Retake button handler: reload the page with warning
+retakeBtn.addEventListener('click', () => {
+    confirm("Retaking will reset your photocard. Continue?") && location.reload();
+});

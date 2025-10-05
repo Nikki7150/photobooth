@@ -12,11 +12,15 @@
     </head>
 
     <body>
-        <a id="home-link" href="index.html" class="h1">Photobooth!</a>
+        <!-- <a id="home-link" href="index.html" class="h1">Photobooth!</a> -->
+        <a href="index.html">
+            <img id="title" src="assets/title.png" alt="Clickable Image">
+        </a>
         <div id="camera">
             <video id="video" autoplay></video>
             <button id="snap">📷</button>
         </div>
+        <img id="click" src="assets/click.png" alt="explanation Image">
 
         <div id="photostrip-wrapper" style="position: relative;">
             <div id="photostrip">
@@ -30,8 +34,8 @@
                     <img id="pattern" src="assets/maroon-overlay.png" style="width:100%; height:100%; object-fit:cover;"/>
                 </div>
             </div>
-            
         </div>
+        <img id="scroll" src="assets/scroll.png" alt="explanation Image">
         <button id="add-sticker">Next Step: Add Stickers!</button>
 
         <!-- Page two. -->
@@ -74,6 +78,7 @@
                 <div class="card clone"></div>
             </div>
             <button id="download">Download! </button>
+            <button id="retake">Retake! </button>
         </div>
     </body>
     <script src="./app.js"></script>

@@ -4,9 +4,11 @@ body {
       justify-content: center;
       align-items: center;
       height: 100vh;
-      /* background: linear-gradient(135deg, #ffe3ec, #d8eafd); */
       font-family: 'Share Tech Mono', monospace;
       text-align: center;
+      background-image: url("assets/wallpaper2.jpeg");
+      background-size: cover;
+      background-attachment: fixed;
     }
 
     h1, h2 {

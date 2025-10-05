@@ -2,6 +2,37 @@ html {
   font-family: 'Share Tech Mono', monospace;
 }
 
+body {
+  background-image: url("assets/wallpaper.png");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 10px;
+  margin-top: 0px;
+}
+
+ #title{
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 114px;
+    margin-bottom: 20px;
+    margin-left: 240px;
+}
+
+#click {
+  height: 100px;
+  float: right;
+  margin-top: -230px;
+  margin-right: 260px;
+}
+
+#scroll {
+  float: right;
+  height: 100px;
+  margin-top: -720px;
+  margin-right: 390px;
+}
+
 #video {
     border: 2px solid #000;
     width: 300px;
@@ -24,18 +55,20 @@ button {
     margin-bottom: 10px;
     width: 120px;
     height: 60px;
-    background-color: #b9b9b9;
-    border: 2px solid black;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    font-family: 'Share Tech Mono', monospace;
     font-size: medium;
+      color: white;
+      background: #ff4d6d;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 button:hover {
+  background: #d6336c;
   transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  
 }
 
 #snap {
@@ -230,6 +263,12 @@ a.h1 {
 }
 
 #download {
-  margin-top: 800px;
-  margin-right: 670px;
+  margin-top: 835px;
+  margin-right: 740px;
+}
+
+#retake {
+  float: right;
+  margin-top: 440px;
+  margin-right: 605px;
 }
