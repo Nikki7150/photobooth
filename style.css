@@ -4,7 +4,7 @@ html {
 
 body {
   background-image: url("assets/wallpaper.png");
-  background-size: cover;
+  background-size: 102%;
   background-attachment: fixed;
   margin: 10px;
   margin-top: 0px;

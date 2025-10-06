@@ -7,7 +7,7 @@ body {
       font-family: 'Share Tech Mono', monospace;
       text-align: center;
       background-image: url("assets/wallpaper2.jpeg");
-      background-size: cover;
+      background-size: 102%;
       background-attachment: fixed;
     }
 
