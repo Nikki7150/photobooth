@@ -1,1 +1,13 @@
-# photobooth
+# Online Photobooth
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
+
+## Description
+This project is an online photobooth that lets you take 4 pictures and allows you to customize it by using the colors given and some patterns of photostrips. I was seeing a lot of photobooth pictures online and I thought maybe I'd be able to make it, so I did. I had started it as a K-Pop photobooth app where I could put kpop idols onthe screen and the user could take pictures with them but I couldnt really figure out how to do it as it was too advanced, So I made it simpler and converted it back into a normal photobooth. Its just a fun project that I thought of making just to practice code=ing and learn more. 
+
+## Technologies used
+* HTML
+* CSS
+* JavaScript
+
+## How I made this project
+I started making this project for fun and also because I wanted a big project that I could post to the Athena Awards Hackclub. This project is an online photobooth that lets you take 4 pictures and allows you to customize it by using the colors given and some patterns of photocards. This was a really big project since I had to learn how to use the web camera and save the photos taken. Since I needed the photos to be saved througout the entire website while customizing, I had to put all the code for all the pages in one html file and hide them in order to make it look pleasant. I had to keep hiding and unhiding elements to create each page. I had a lot of problems with the camera and saving the 4 pictures onto separate slots but I went online and learnt how to do it. I also had a lot of problems with the download button which allows the user to download their photo strip to their laptop. I had to learn a lot of topics but I finally did it. I had many things to debug and move and it took a lot of time. For the code, it took 12 hours. And it took me almost 5 hours to make the art. All the art seen on this website is handmade by me. I drew the two wallpapers in the first page and the photobooth page. The pictures on the photobooth page were handpicked by me from the internet and I had to place them in such a way that they dont intrude on the code. I spent a lot of time brainstroming the theme and the placement and I had to keep coming back to my ipad to tweek the designs. I also hand-drew all the photostrip patters. I got some inspiration from pinterest and drew them all on my own. These drawings also needed a lot of tweeks since I had to make them the perfect siz to make them look good. I had a lot of fun making this and hope to expand on it soon. 
