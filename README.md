@@ -2,7 +2,7 @@
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
 
 ## Description
-This project is an online photobooth that lets you take 4 pictures and allows you to customize it by using the colors given and some patterns of photostrips. I was seeing a lot of photobooth pictures online and I thought maybe I'd be able to make it, so I did. I had started it as a K-Pop photobooth app where I could put kpop idols onthe screen and the user could take pictures with them but I couldnt really figure out how to do it as it was too advanced, So I made it simpler and converted it back into a normal photobooth. Its just a fun project that I thought of making just to practice code=ing and learn more. 
+This project is an online photobooth that lets you take 4 pictures and allows you to customize it by using the colors given and some patterns of photostrips. I was seeing a lot of photobooth pictures online and I thought maybe I'd be able to make it, so I did. I had started it as a K-Pop photobooth app where I could put kpop idols onthe screen and the user could take pictures with them but I couldnt really figure out how to do it as it was too advanced, So I made it simpler and converted it back into a normal photobooth. Its just a fun project that I thought of making just to practice coding and learn more. 
 
 ## Technologies used
 * HTML
